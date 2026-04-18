@@ -1,3 +1,5 @@
+-- SQL ADVANCED PORTFOLIO PROJECT
+-- Section 1: Advanced Employee Analytics
 -- Sample table creation
 CREATE TABLE EmployeeSales (
     EmployeeID INT,
@@ -116,6 +118,8 @@ SELECT EmpID, Name, Department, Salary,
        DENSE_RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS DenseRankNum
 FROM EMPLOYEE;
 
+
+--Section 2: IPL Database (Sports)
 -- Create IPL database
 CREATE DATABASE IPL;
 
@@ -185,6 +189,8 @@ SELECT PlayerID, Name, Team, Runs,
        DENSE_RANK() OVER (ORDER BY Runs DESC) AS DenseRankNum
 FROM Players;
 
+
+-- Section 3: Stock Market (ZerodhaDB)
 -- Create Zerodha database
 CREATE DATABASE ZerodhaDB;
 
@@ -242,6 +248,7 @@ SELECT TradeDate, StockSymbol, ClosePrice,
 FROM Trades
 WHERE StockSymbol = 'INFY';
 
+-- Section 4: Retail Database
 -- Create new database
 CREATE DATABASE RetailDB;
 
@@ -266,6 +273,7 @@ CREATE TABLE ORDERS (
     FOREIGN KEY (CustomerID) REFERENCES CUSTOMER(CustomerID)
 );
 
+-- Section 5: Banking System
 -- Payments table
 CREATE TABLE PAYMENTS (
     PaymentID INT PRIMARY KEY,
@@ -357,6 +365,8 @@ FROM TRANSACTION t
 JOIN ACCOUNT a ON t.AccountID = a.AccountID
 JOIN CUSTOMER c ON a.CustomerID = c.CustomerID;
 
+
+-- Section 6: LIC Housing Finance
 CREATE DATABASE LIC_HousingFinance;
 USE LIC_HousingFinance;
 
